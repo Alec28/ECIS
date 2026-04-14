@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bar & Restaurant Insurance | Express Center Insurance Services, Inc.</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0d2340;--navy-mid:#163356;--gold:#b8892a;--gold-light:#d4a84b;--cream:#f8f5ef;--cream-dark:#ede9e0;--text:#1a1a1a;--text-mid:#4a4a4a;--text-muted:#7a7a7a;--white:#ffffff;--border:rgba(13,35,64,0.12)}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.7;font-size:16px}
+.topbar{background:var(--navy);color:rgba(255,255,255,.75);font-size:13px;padding:.45rem 2rem;display:flex;justify-content:flex-end;gap:2rem}
+.topbar a{color:var(--gold-light);text-decoration:none}.topbar a:hover{color:var(--white)}
+nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;padding:0 2rem}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{font-family:'Libre Baskerville',serif;font-size:17px;font-weight:700;color:var(--navy);text-decoration:none;line-height:1.2}
+.nav-logo span{display:block;font-size:11px;font-weight:400;font-family:'DM Sans',sans-serif;color:var(--text-muted);letter-spacing:.05em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:.25rem;list-style:none}
+.nav-links>li{position:relative}
+.nav-links>li>a{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none;padding:.5rem .75rem;border-radius:6px;display:block;transition:color .15s,background .15s}
+.nav-links>li>a:hover,.nav-links>li>a.active{color:var(--navy);background:var(--cream)}
+.dropdown{display:none;position:absolute;top:calc(100% + 4px);left:0;background:var(--white);border:1px solid var(--border);border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.10);min-width:230px;padding:.5rem 0;z-index:200}
+.nav-links>li:hover .dropdown{display:block}
+.dropdown a{display:block;padding:.55rem 1.25rem;font-size:13.5px;color:var(--text-mid);text-decoration:none;transition:background .12s,color .12s}
+.dropdown a:hover{background:var(--cream);color:var(--navy)}
+.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:.6rem 1.25rem!important;border-radius:6px!important;font-weight:500!important}
+.nav-cta:hover{background:var(--navy-mid)!important}
+.page-hero{background:var(--navy);color:var(--white);padding:4rem 2rem;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(184,137,42,.18) 0%,transparent 70%)}
+.page-hero-inner{position:relative;max-width:1100px;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem;display:inline-block;border:1px solid rgba(184,137,42,.4);padding:.3rem 1rem;border-radius:100px}
+.page-hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.2;margin-bottom:1rem}
+.page-hero p{font-size:17px;color:rgba(255,255,255,.72);max-width:600px;line-height:1.7;margin-bottom:1.75rem}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:1rem}
+.breadcrumb a{color:var(--gold-light);text-decoration:none}.breadcrumb a:hover{color:var(--white)}
+section{padding:4rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+h2{font-family:'Libre Baskerville',serif;font-size:clamp(24px,3vw,36px);font-weight:700;line-height:1.22;color:var(--navy);margin-bottom:1rem}
+h3{font-size:18px;font-weight:600;color:var(--navy);margin-bottom:.6rem;line-height:1.3}
+p{color:var(--text-mid);line-height:1.7;margin-bottom:1.1rem}
+ul{color:var(--text-mid);padding-left:1.5rem;margin-bottom:1.25rem}
+ul li{margin-bottom:.45rem}
+.lead{font-size:17px;color:var(--text-mid);line-height:1.7}
+.btn-gold{background:var(--gold);color:var(--white);padding:.85rem 2rem;border-radius:6px;font-size:15px;font-weight:600;text-decoration:none;transition:background .15s;display:inline-block}
+.btn-gold:hover{background:var(--gold-light)}
+.btn-navy{display:inline-block;background:var(--navy);color:var(--white);padding:.8rem 1.75rem;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;transition:background .15s}
+.btn-navy:hover{background:var(--navy-mid)}
+.btn-outline{display:inline-block;border:1.5px solid var(--navy);color:var(--navy);padding:.8rem 1.75rem;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;transition:background .15s,color .15s}
+.btn-outline:hover{background:var(--navy);color:var(--white)}
+.content-grid{display:grid;grid-template-columns:2fr 1fr;gap:3rem;align-items:start}
+.sidebar-card{background:var(--cream);border:1px solid var(--cream-dark);border-radius:10px;padding:1.75rem;margin-bottom:1.5rem}
+.sidebar-card h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:.75rem}
+.sidebar-card p{font-size:14px}
+.sidebar-card a{font-size:14px;color:var(--gold);font-weight:600;text-decoration:none}
+.sidebar-card a:hover{color:var(--navy)}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem}
+.feature-card{background:var(--cream);border:1px solid var(--cream-dark);border-radius:10px;padding:1.5rem}
+.feature-card .icon{font-size:28px;margin-bottom:.75rem}
+.feature-card h3{font-size:16px;margin-bottom:.5rem}
+.feature-card p{font-size:14px;margin-bottom:0}
+.cta-band{background:var(--navy);color:var(--white);padding:4rem 2rem;text-align:center}
+.cta-band h2{color:var(--white);margin-bottom:1rem}
+.cta-band p{color:rgba(255,255,255,.7);font-size:17px;max-width:560px;margin:0 auto 2rem}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-outline-white{border:1.5px solid rgba(255,255,255,.4);color:var(--white);padding:.85rem 2rem;border-radius:6px;font-size:15px;font-weight:500;text-decoration:none;transition:background .15s,border-color .15s;display:inline-block}
+.btn-outline-white:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.7)}
+footer{background:var(--navy);color:rgba(255,255,255,.65);padding:3.5rem 2rem 2rem}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.75rem}
+.footer-brand h3{font-family:'Libre Baskerville',serif;font-size:16px;color:var(--white);margin-bottom:.75rem}
+.footer-brand p{font-size:13.5px;line-height:1.65;margin-bottom:1rem}
+.footer-col h4{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;padding:0;margin:0}
+.footer-col ul li a{font-size:13.5px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .12s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12.5px}
+.footer-bottom a{color:rgba(255,255,255,.5);text-decoration:none}.footer-bottom a:hover{color:var(--white)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.form-group label{font-size:13px;font-weight:500;color:var(--text-mid)}
+.form-group input,.form-group textarea,.form-group select{border:1px solid var(--border);border-radius:6px;padding:.65rem .9rem;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);outline:none;transition:border-color .15s}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--navy)}
+.form-group textarea{resize:vertical;min-height:100px}
+.btn-submit{width:100%;background:var(--navy);color:var(--white);border:none;padding:.85rem;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .15s}
+.btn-submit:hover{background:var(--navy-mid)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.info-box{background:var(--navy);color:var(--white);border-radius:10px;padding:2rem}
+.info-box h3{color:var(--white);margin-bottom:1rem}
+.info-box p{color:rgba(255,255,255,.75);font-size:14px;margin-bottom:.75rem}
+.info-box a{color:var(--gold-light);text-decoration:none;font-weight:600}
+@media(max-width:768px){.content-grid,.two-col{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.topbar{justify-content:center;flex-direction:column;gap:.25rem;text-align:center}.form-row{grid-template-columns:1fr}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span>📞 <a href="tel:8182406633">818-240-6633</a></span>
+  <span>✉️ <a href="mailto:ed@ecis1.com">ed@ecis1.com</a></span>
+  <span>🕐 Mon–Fri, 9am–5pm</span>
+</div><nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Express Center Insurance<span>Services, Inc. — California</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About Us</a></li>
+      <li>
+        <a href="#">Business Insurance ▾</a>
+        <div class="dropdown">
+          <a href="general-liability.html">General Liability Insurance</a>
+          <a href="workers-compensation.html">Worker's Compensation</a>
+          <a href="commercial-auto.html">Commercial Auto Insurance</a>
+          <a href="surety-bonds.html">Surety Bonds</a>
+          <a href="builders-risk.html">Builder's Risk Insurance</a>
+          <a href="contractors-insurance.html">Contractor's Insurance</a>
+          <a href="lawyers-liability.html">Lawyers Liability Insurance</a>
+          <a href="lessors-risk.html">Lessor's Risk Insurance</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">Commercial Insurance ▾</a>
+        <div class="dropdown">
+          <a href="wholesaler-insurance.html">Wholesaler Insurance</a>
+          <a href="importer-exporter.html">Importer &amp; Exporter Insurance</a>
+          <a href="bar-restaurant.html">Bar &amp; Restaurant Insurance</a>
+          <a href="retail-store.html">Retail Store Insurance</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">Personal Insurance ▾</a>
+        <div class="dropdown">
+          <a href="high-value-home.html">High-Value Home Insurance</a>
+          <a href="auto-motorcycle.html">Auto &amp; Motorcycle Insurance</a>
+        </div>
+      </li>
+      <li><a href="client-forms.html">Client Forms</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Commercial Insurance / Bar & Restaurant Insurance</div>
+    <div class="eyebrow">Commercial Insurance</div>
+    <h1>Bar & Restaurant Insurance</h1>
+    <p>Comprehensive coverage for California's bars, restaurants, and food service businesses.</p>
+    <a href="contact.html" class="btn-gold">Get a Free Quote</a>
+  </div>
+</div>
+<section><div class="container"><div class="content-grid">
+  <div>
+    <h2>What Is Bar & Restaurant Insurance?</h2>
+    <p>The food and beverage industry carries unique risks — from slip-and-fall incidents and foodborne illness claims to liquor liability and equipment breakdown. We build complete insurance packages for California restaurants, bars, cafes, and food service operations.</p>
+    <h3>What's Typically Covered</h3>
+    <ul><li>General liability and liquor liability</li><li>Commercial property and equipment breakdown</li><li>Workers' compensation for kitchen and service staff</li><li>Commercial auto for delivery operations</li><li>Food spoilage and contamination coverage</li><li>Business interruption insurance</li></ul>
+    
+    <p>As an independent broker, we compare multiple carriers to find the right policy at the right price for your specific situation in California.</p>
+    <a href="contact.html" class="btn-navy" style="margin-top:.5rem;">Request a Quote</a>
+  </div>
+  <div>
+  <div class="sidebar-card">
+    <h4>📞 Get a Free Quote</h4>
+    <p>Speak directly with Ed for fast, personal service and competitive rates.</p>
+    <a href="contact.html" class="btn-gold" style="display:block;text-align:center;margin-bottom:.75rem;">Request a Quote</a>
+    <a href="tel:8182406633">📞 818-240-6633</a>
+  </div>
+  <div class="sidebar-card">
+    <h4>🗂 Related Coverage</h4>
+    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem;">
+      <li><a href="general-liability.html">General Liability</a></li>
+      <li><a href="workers-compensation.html">Worker's Compensation</a></li>
+      <li><a href="commercial-auto.html">Commercial Auto</a></li>
+      <li><a href="surety-bonds.html">Surety Bonds</a></li>
+      <li><a href="builders-risk.html">Builder's Risk</a></li>
+      <li><a href="contractors-insurance.html">Contractor's Insurance</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-card">
+    <h4>📍 Our Office</h4>
+    <p>2600 Foothill Blvd<br>La Crescenta, CA 91214<br>Mon–Fri, 9am–5pm</p>
+    <a href="mailto:ed@ecis1.com">ed@ecis1.com</a>
+  </div>
+</div>
+</div></div></section>
+<div class="cta-band">
+  <div class="container">
+    <h2>Ready to Get Protected?</h2>
+    <p>Contact us today for a free, no-obligation quote. We'll find the right coverage at the right price.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-gold">Get a Free Quote</a>
+      <a href="tel:8182406633" class="btn-outline-white">📞 818-240-6633</a>
+    </div>
+  </div>
+</div><footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Express Center Insurance Services, Inc.</h3>
+      <p>Independent insurance broker serving businesses and homeowners across California for over 30 years. Based in La Crescenta — available statewide.</p>
+      <p style="font-size:13px;">📞 <a href="tel:8182406633" style="color:var(--gold-light);text-decoration:none;">818-240-6633</a> &nbsp;|&nbsp; ✉️ <a href="mailto:ed@ecis1.com" style="color:var(--gold-light);text-decoration:none;">ed@ecis1.com</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Business Insurance</h4>
+      <ul>
+        <li><a href="general-liability.html">General Liability</a></li>
+        <li><a href="workers-compensation.html">Worker's Compensation</a></li>
+        <li><a href="commercial-auto.html">Commercial Auto</a></li>
+        <li><a href="surety-bonds.html">Surety Bonds</a></li>
+        <li><a href="builders-risk.html">Builder's Risk</a></li>
+        <li><a href="contractors-insurance.html">Contractor's Insurance</a></li>
+        <li><a href="lawyers-liability.html">Lawyers Liability</a></li>
+        <li><a href="lessors-risk.html">Lessor's Risk</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Personal &amp; Commercial</h4>
+      <ul>
+        <li><a href="high-value-home.html">High-Value Home</a></li>
+        <li><a href="auto-motorcycle.html">Auto &amp; Motorcycle</a></li>
+        <li><a href="bar-restaurant.html">Bar &amp; Restaurant</a></li>
+        <li><a href="retail-store.html">Retail Store</a></li>
+        <li><a href="wholesaler-insurance.html">Wholesaler Insurance</a></li>
+        <li><a href="importer-exporter.html">Importer &amp; Exporter</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="client-forms.html">Client Forms</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Express Center Insurance Services, Inc. All Rights Reserved.</span>
+    <span><a href="#">Privacy Policy</a></span>
+  </div>
+</footer>
+</body></html>
